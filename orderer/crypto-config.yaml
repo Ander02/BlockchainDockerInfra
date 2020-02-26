@@ -1,0 +1,6 @@
+OrdererOrgs:
+  - Name: Orderer
+    Domain: blockchain.com
+    EnableNodeOUs: false
+    Specs:
+      - Hostname: orderer.blockchain.com

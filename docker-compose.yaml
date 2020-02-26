@@ -1,0 +1,34 @@
+version: '3'
+
+services: 
+    orderer.blockchain.com:
+        image: hyperledger/fabric-orderer
+        volumes: 
+        - ./orderer/:/etc/hyperledger/fabric
+        ports: 
+        - '7050:7050'
+        expose: 
+        - '7050'
+    peer1.blockchain.com:
+        image: hyperledger/fabric-peer
+        volumes: 
+        - ./peer1/:/etc/hyperledger/fabric       
+        environment: 
+        - CORE_PEER_ID=peer1.blockchain.com
+        - CORE_PEER_NETWORKID=blockchain
+        ports: 
+        - '7051:7051'
+        expose: 
+        - '7051'
+    peer2.blockchain.com:
+        image: hyperledger/fabric-peer
+        volumes: 
+        - ./peer2/:/etc/hyperledger/fabric
+        environment: 
+        - CORE_PEER_ID=peer1.blockchain.com
+        - CORE_PEER_NETWORKID=blockchain
+        ports: 
+        - '7052:7051'
+        expose: 
+        - '7051'
+        

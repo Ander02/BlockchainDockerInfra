@@ -1,0 +1,9 @@
+PeerOrgs:
+  - Name: Peer1
+    Domain: peer1.blockchain.com
+    EnableNodeOUs: false
+    Specs:
+      - Hostname: peer1
+        CommonName: peer1.blockchain.com 
+    Users:
+      Count: 1
