@@ -25,7 +25,7 @@ services:
         volumes: 
         - ./peer2/:/etc/hyperledger/fabric
         environment: 
-        - CORE_PEER_ID=peer1.blockchain.com
+        - CORE_PEER_ID=peer2.blockchain.com
         - CORE_PEER_NETWORKID=blockchain
         ports: 
         - '7052:7051'
